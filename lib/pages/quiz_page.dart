@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../utils/question.dart';
-import '../utils/quiz.dart';
+
+
 
 // a widget
 class QuizPage extends StatefulWidget {
@@ -20,7 +20,8 @@ class QuizPage extends StatefulWidget {
 class QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
-    return new Stack( // stacks widgets on top of each other
+    return new Stack(
+      // stacks widgets on top of each other
       children: <Widget>[
         new Column(// this is our main page
             children: <Widget>[
@@ -34,7 +35,18 @@ class QuizPageState extends State<QuizPage> {
                         child: new Container(
                           child: new Text("True"),
                         ),
-                      ))))
+                      )))),
+                                new Expanded(
+              child: new Material(
+                  // False button
+                  color: Colors.redAccent,
+                  child: new InkWell(
+                      onTap: () => print("you answered False"),
+                      child: new Center(
+                        child: new Container(
+                          child: new Text("False"),
+                        ),
+                      )))),
         ])
       ],
     );
