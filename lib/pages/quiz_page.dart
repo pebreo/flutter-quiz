@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import '../ui/answer_button.dart';
 
 
 // a widget
@@ -25,28 +24,8 @@ class QuizPageState extends State<QuizPage> {
       children: <Widget>[
         new Column(// this is our main page
             children: <Widget>[
-          new Expanded(
-              child: new Material(
-                  // True button
-                  color: Colors.greenAccent,
-                  child: new InkWell(
-                      onTap: () => print("you answered true"),
-                      child: new Center(
-                        child: new Container(
-                          child: new Text("True"),
-                        ),
-                      )))),
-                                new Expanded(
-              child: new Material(
-                  // False button
-                  color: Colors.redAccent,
-                  child: new InkWell(
-                      onTap: () => print("you answered False"),
-                      child: new Center(
-                        child: new Container(
-                          child: new Text("False"),
-                        ),
-                      )))),
+              new AnswerButton(true),
+              new AnswerButton(false),
         ])
       ],
     );
