@@ -6,6 +6,15 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Material(
       color: Colors.greenAccent,
+      child: new InkWell(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new Text('hello'),
+            new Text('Tap to start!')
+          ],
+        )
+      )
     );
   }
 }
