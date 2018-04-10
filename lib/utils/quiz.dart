@@ -11,18 +11,13 @@ class Quiz {
     _questions.shuffle();
   }
 
-  // getter
+  // getters
   List<Question> get questions => _questions;
-
-  // getter
   int get length => _questions.length;
-
-  //getter
   int get questionNumber => _currentQuestionIndex+1;
-
-  // getter syntax - we use a getter because _score is private
   int get score => _score;
 
+  // getter
   Question get nextQuestion {
     _currentQuestionIndex++;
     if(_currentQuestionIndex >= this.length) return null;
