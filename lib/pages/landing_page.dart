@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import './quiz_page.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -7,7 +8,7 @@ class LandingPage extends StatelessWidget {
     return new Material(
       color: Colors.greenAccent,
       child: new InkWell( // an invisible button
-        onTap: () => print('tapped!'),
+        onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new QuizPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
