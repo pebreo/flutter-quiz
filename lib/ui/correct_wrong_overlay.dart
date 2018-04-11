@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+
+const double PI = 3.1415926535897932;
 
 class CorrectWrongOverlay extends StatefulWidget {
   final bool _isCorrect;
