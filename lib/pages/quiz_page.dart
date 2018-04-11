@@ -62,7 +62,18 @@ class QuizPageState extends State<QuizPage> {
               new AnswerButton(false, () => handleAnswer(false)), // false button
           ]
         ),
-        showOverlay == true ? new CorrectWrongOverlay(isCorrect) : new Container(),
+        showOverlay == true ? new CorrectWrongOverlay(
+          isCorrect,
+          () {
+            currentQuestion = quiz.nextQuestion;
+            this.setState(() { 
+              showOverlay = false;
+              questionText = currentQuestion.question;
+              questionNumber = quiz.questionNumber;
+            });
+          }
+          
+        ) : new Container(),
       ],
     );
   }
