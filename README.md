@@ -1,6 +1,8 @@
-# quiz
+# Quiz App in Flutter
 
-A new Flutter project.
+This is code from the tutorial
+
+https://www.youtube.com/watch?v=jBBl1tYkUnE
 
 ## Getting Started
 
