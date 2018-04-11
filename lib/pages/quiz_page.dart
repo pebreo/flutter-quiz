@@ -31,7 +31,7 @@ class QuizPageState extends State<QuizPage> {
               new AnswerButton(false, () => print('you answered false')),
           ]
         ),
-        new CorrectWrongOverlay(),
+        new CorrectWrongOverlay(false),
       ],
     );
   }
