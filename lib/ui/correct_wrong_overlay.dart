@@ -13,8 +13,10 @@ class CorrectWrongOverlayState extends State<CorrectWrongOverlay> {
         child: new InkWell(
           onTap: () => print('tapped overlay'),
           child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                new Container(child: new Icon(Icons.done)),
+                new Container(child: new Icon(Icons.done, size: 80.0)),
+                new Text("Correct!", style: new TextStyle(color: Colors.white, fontSize: 30.0))
               ],
           ),
         ),
