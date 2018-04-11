@@ -4,6 +4,7 @@ import '../UI/question_text.dart';
 import '../UI/correct_wrong_overlay.dart';
 import '../utils/question.dart';
 import '../utils/quiz.dart';
+import './score_page.dart';
 
 // a widget
 class QuizPage extends StatefulWidget {
@@ -65,6 +66,9 @@ class QuizPageState extends State<QuizPage> {
         showOverlay == true ? new CorrectWrongOverlay(
           isCorrect,
           () {
+            if(quiz.length == questionNumber) {
+              Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new ScorePage(quiz.score, quiz.length)));
+            }
             currentQuestion = quiz.nextQuestion;
             this.setState(() { 
               showOverlay = false;

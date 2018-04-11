@@ -22,6 +22,12 @@ class QuestionTextState extends State<QuestionText> with SingleTickerProviderSta
     _fontSizeAnimation.addListener(() => this.setState(() {})); // call when the text is displayed
     _fontSizeAnimationController.forward(); // run the animation
   }
+
+  @override
+  void dispose() {
+    _fontSizeAnimationController.dispose();
+    super.dispose();
+  }
   
   @override
   void didUpdateWidget(QuestionText oldWidget) {
