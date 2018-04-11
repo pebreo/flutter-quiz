@@ -72,7 +72,6 @@ class QuizPageState extends State<QuizPage> {
               questionNumber = quiz.questionNumber;
             });
           }
-          
         ) : new Container(),
       ],
     );
